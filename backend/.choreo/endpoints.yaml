@@ -7,4 +7,4 @@ endpoints:
     networkVisibility: Public
     context: /
     environment:
-      TRIVY_DISABLE_VEX_NOTICE: "true"  # Add this line to disable VEX notice
+      TRIVY_DISABLE_VEX_NOTICE: "true"
