@@ -7,5 +7,4 @@ endpoints:
     networkVisibility: Public
     context: /
     environment:
-      - name: TRIVY_DISABLE_VEX_NOTICE
-        value: "true"
+      TRIVY_DISABLE_VEX_NOTICE: "true"  
