@@ -7,4 +7,16 @@ endpoints:
     networkVisibility: Public
     context: /
     environment:
-      TRIVY_DISABLE_VEX_NOTICE: "true"
+      TRIVY_DISABLE_VEX_NOTICE: "true"  # Suppress VEX notices
+      # Add other environment variables as needed for security or configuration
+      # Example: DEBUG: "false" to disable debug mode in production
+      DEBUG: "false"  # Ensure debug mode is off in production
+      ALLOWED_HOSTS: "*"  # Adjust this for specific domains if necessary
+    security:
+      - type: apiKey  # Example security type
+        name: x-api-key  # Ensure you have appropriate security in place
+      - type: oauth2  # If using OAuth2, specify scopes as needed
+        name: oauth2
+    description: >
+      REST API that provides access to resources.
+      Ensure to authenticate using the provided API key or OAuth2.
