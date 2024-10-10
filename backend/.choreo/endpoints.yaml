@@ -6,3 +6,6 @@ endpoints:
     type: REST
     networkVisibility: Public
     context: /
+    environment:
+      - name: TRIVY_DISABLE_VEX_NOTICE
+        value: "true"
