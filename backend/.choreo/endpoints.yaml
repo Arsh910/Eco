@@ -7,16 +7,41 @@ endpoints:
     networkVisibility: Public
     context: /
     environment:
-      TRIVY_DISABLE_VEX_NOTICE: "true"  # Suppress VEX notices
-      # Add other environment variables as needed for security or configuration
-      # Example: DEBUG: "false" to disable debug mode in production
-      DEBUG: "false"  # Ensure debug mode is off in production
-      ALLOWED_HOSTS: "*"  # Adjust this for specific domains if necessary
+      # Suppress VEX notices for vulnerabilities that are not applicable
+      TRIVY_DISABLE_VEX_NOTICE: "true"
+
+      # Disable debug mode in production for security
+      DEBUG: "false"
+
+      # Set allowed hosts, adjust as per your domain setup
+      ALLOWED_HOSTS: "*"
+
+      # Optional: Add other necessary environment variables
+      DJANGO_SETTINGS_MODULE: "backend.settings"
+      PYTHONUNBUFFERED: "1"
+
     security:
-      - type: apiKey  # Example security type
-        name: x-api-key  # Ensure you have appropriate security in place
-      - type: oauth2  # If using OAuth2, specify scopes as needed
+      - type: apiKey  # API key-based authentication
+        name: x-api-key
+      - type: oauth2  # OAuth2 authentication, if needed
         name: oauth2
+
     description: >
-      REST API that provides access to resources.
-      Ensure to authenticate using the provided API key or OAuth2.
+      REST API that provides access to resources. Ensure to authenticate using the provided API key or OAuth2.
+
+    deployment:
+      runtime: python3.11  # Specify the runtime to ensure Python is used
+      image: python:3.11-slim  # Use a Python-specific image to avoid Go-related issues
+
+    resources:
+      cpu: 0.5  # Set CPU and memory limits as per your application needs
+      memory: 512Mi
+
+    lifecycle:
+      hooks:
+        postStart:
+          exec:
+            command:
+              - python
+              - manage.py
+              - migrate  # Run migrations after the container starts
