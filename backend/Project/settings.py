@@ -95,17 +95,9 @@ LOGOUT_REDIRECT_URL = 'https://33f20867-ede9-4da6-bee9-f5cff26afa2f.e1-us-east-a
 
 GOOGLE_REDIRECT_URI = 'http://localhost:8000/dj-rest-auth/google/callback/'
 
-CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",
-    "https://d4fb45b6-f97f-4526-9bda-a60a721d6636-dev.e1-us-east-azure.choreoapis.dev/ecodeploy/backend/v1.0",
-    "https://33f20867-ede9-4da6-bee9-f5cff26afa2f.e1-us-east-azure.choreoapps.dev",
-]
+CORS_ALLOWED_ORIGINS = ['*']
 
-CSRF_TRUSTED_ORIGINS = [
-    "http://localhost:5173",
-    "https://d4fb45b6-f97f-4526-9bda-a60a721d6636-dev.e1-us-east-azure.choreoapis.dev/ecodeploy/backend/v1.0",
-    "https://33f20867-ede9-4da6-bee9-f5cff26afa2f.e1-us-east-azure.choreoapps.dev",
-]
+CSRF_TRUSTED_ORIGINS = ['*']
 
 MIDDLEWARE = [
 
