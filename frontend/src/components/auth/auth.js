@@ -61,6 +61,7 @@ function LoginPage() {
         window.location.href = "/";
       })
       .catch((errors) => {
+        console.log(errors);
         toast.update(m, {
           render: `${errors.response.data.error}`,  
           autoClose: true,                        
