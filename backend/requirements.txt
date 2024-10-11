@@ -15,7 +15,6 @@ daphne==4.1.2
 defusedxml==0.8.0rc2
 dj-rest-auth==6.0.0
 Django==5.1
-django-allauth==0.61.1
 django-cors-headers==4.4.0
 django-oauth-toolkit==2.4.0
 django-websockets==0.0.10
