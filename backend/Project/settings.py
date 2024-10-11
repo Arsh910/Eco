@@ -101,6 +101,8 @@ CORS_ALLOWED_ORIGINS = [
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
+    "https://d4fb45b6-f97f-4526-9bda-a60a721d6636-dev.e1-us-east-azure.choreoapis.dev/ecodeploy/backend/v1.0",
+    "https://d4fb45b6-f97f-4526-9bda-a60a721d6636-dev.e1-us-east-azure.choreoapis.dev/ecodeploy/backend/v1"
 ]
 
 MIDDLEWARE = [
