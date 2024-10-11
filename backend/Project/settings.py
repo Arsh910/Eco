@@ -24,10 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-7y6zdbl^3c!=w=5j3o^j(u+c#8(l620j=#rq&h&pze_&b(nap-"
+SECRET_KEY = os.getenv('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -65,8 +65,8 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
-YOUR_CLIENT_ID="490514805646-1fejvo7jj43h41sf8c6gvlo5ufoeblp8.apps.googleusercontent.com"
-YOUR_SECRET_KEY="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"
+YOUR_CLIENT_ID = os.getenv("YOUR_CLIENT_ID")
+YOUR_SECRET_KEY = os.getenv("YOUR_SECRET_KEY")
 
 CORS_ALLOW_CREDENTIALS = True
 
@@ -93,16 +93,16 @@ SOCIALACCOUNT_PROVIDERS = {
 LOGIN_REDIRECT_URL = 'https://33f20867-ede9-4da6-bee9-f5cff26afa2f.e1-us-east-azure.choreoapps.dev/home'
 LOGOUT_REDIRECT_URL = 'https://33f20867-ede9-4da6-bee9-f5cff26afa2f.e1-us-east-azure.choreoapps.dev/'
 
-GOOGLE_REDIRECT_URI = 'http://localhost:8000/dj-rest-auth/google/callback/'
+GOOGLE_REDIRECT_URI = 'https://33f20867-ede9-4da6-bee9-f5cff26afa2f.e1-us-east-azure.choreoapps.dev/dj-rest-auth/google/callback/'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    'https://d4fb45b6-f97f-4526-9bda-a60a721d6636-dev.e1-us-east-azure.choreoapis.dev',
-    ]
+    "https://33f20867-ede9-4da6-bee9-f5cff26afa2f.e1-us-east-azure.choreoapps.dev"
+]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
-    'https://d4fb45b6-f97f-4526-9bda-a60a721d6636-dev.e1-us-east-azure.choreoapis.dev',
+    "https://33f20867-ede9-4da6-bee9-f5cff26afa2f.e1-us-east-azure.choreoapps.dev"
 ]
 
 MIDDLEWARE = [
@@ -158,7 +158,7 @@ CHANNEL_LAYERS = {
 #     "default": {
 #         "BACKEND": "channels_redis.core.RedisChannelLayer",
 #         "CONFIG": {
-#             "hosts": ["redis://default:TJkMzUrNYlhPrfuLJVidFXJXVpNrHgbB@redis.railway.internal:6379redis://default:TJkMzUrNYlhPrfuLJVidFXJXVpNrHgbB@redis.railway.internal:6379"],
+#             "hosts": [os.getenv("RHOST")],
 #         },
 #     },
 # }
@@ -176,12 +176,12 @@ CHANNEL_LAYERS = {
 
 DATABASES = {
     'default': {
-        'ENGINE': "django.db.backends.postgresql",
-        'HOST': "pg-d4fb45b6-f97f-4526-9bda-a60a721d6636-eco3496692413-choreo-or.e.aivencloud.com",
-        'NAME': "defaultdb",
-        'USER': "avnadmin",
-        'PASSWORD': "AVNS_2ssINcbyd4pOrkwGV2u",
-        'PORT': "6653",
+        'ENGINE': os.getenv('ENGINE'),
+        'HOST': os.getenv('HOST'),
+        'NAME': os.getenv('NAME'),
+        'USER': os.getenv('USER'),
+        'PASSWORD': os.getenv('PASSWORD'),
+        'PORT': os.getenv('PORT'),
     }
 }
 
@@ -296,9 +296,9 @@ TEMP = os.path.join(BASE_DIR , 'media_cdn/temp')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # mail
-EMAIL_HOST="smtp.gmail.com"
-EMAIL_HOST_USER="notoherupa@gmail.com"
-EMAIL_HOST_PASSWORD="rnuuniecqypgvdvc"
-EMAIL_PORT="587"
+EMAIL_HOST = os.getenv("EMAIL_HOST")
+EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER")
+EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD")
+EMAIL_PORT = int(os.getenv("EMAIL_PORT"))
 EMAIL_USE_TLS = True
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
