@@ -61,9 +61,6 @@ six==1.16.0
 social-auth-app-django==5.4.2
 sqlparse==0.5.1
 Twisted==24.3.0
-
-# Only install twisted-iocpsupport on Windows systems
-twisted-iocpsupport==1.0.4; platform_system == "Windows"
 txaio==23.1.1
 typing_extensions==4.12.2
 tzdata==2024.1
@@ -79,3 +76,5 @@ zope.hookable==7.0
 zope.interface==7.0.1
 zope.lifecycleevent==5.0
 zope.proxy==6.1
+twisted-iocpsupport==1.0.4;
+
