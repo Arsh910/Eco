@@ -46,7 +46,7 @@ function LoginPage() {
     console.log(formdata.password);
     console.log(formdata.confpassword);
     axios
-      .post(`http://localhost:8000${endpoint}`, {
+      .post(`https://d4fb45b6-f97f-4526-9bda-a60a721d6636-dev.e1-us-east-azure.choreoapis.dev/ecodeploy/backend/v1.0${endpoint}`, {
         email: formdata.email,
         username: signUp ? formdata.username : undefined,
         password: formdata.password,
@@ -85,7 +85,7 @@ function LoginPage() {
     if (code != undefined){
     const k = toast.loading("wait please , we are logging you in");
     axios
-      .get(`http://localhost:8000/dj-rest-auth/google/callback/?code=${code}`)
+      .get(`https://d4fb45b6-f97f-4526-9bda-a60a721d6636-dev.e1-us-east-azure.choreoapis.dev/ecodeploy/backend/v1.0/dj-rest-auth/google/callback/?code=${code}`)
       .then((response) => {
         if(response.data.g_type == 'eco-google-login-for-user'){
           toast.update(k,{
