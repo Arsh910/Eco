@@ -52,7 +52,7 @@ const App = () => {
   else{
     // Check if user is authenticated
       axios
-        .get("https://bc3d638e-4472-44c8-9ad4-eacf63dd27a2.e1-us-east-azure.choreoapps.dev", {
+        .get("http://127.0.0.1:8000", {
           headers: {
             Authorization: localStorage.getItem("access_token")
               ? "JWT " + localStorage.getItem("access_token")
