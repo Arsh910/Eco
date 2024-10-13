@@ -87,10 +87,10 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-LOGIN_REDIRECT_URL = 'http://localhost:5173/home'
-LOGOUT_REDIRECT_URL = 'http://localhost:5173/'
+LOGIN_REDIRECT_URL = 'https://bc3d638e-4472-44c8-9ad4-eacf63dd27a2.e1-us-east-azure.choreoapps.dev/home'
+LOGOUT_REDIRECT_URL = 'https://bc3d638e-4472-44c8-9ad4-eacf63dd27a2.e1-us-east-azure.choreoapps.dev/'
 
-GOOGLE_REDIRECT_URI = 'http://localhost:8000/dj-rest-auth/google/callback/'
+GOOGLE_REDIRECT_URI = 'https://bc3d638e-4472-44c8-9ad4-eacf63dd27a2.e1-us-east-azure.choreoapps.dev/dj-rest-auth/google/callback/'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
