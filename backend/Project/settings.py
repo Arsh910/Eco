@@ -87,7 +87,7 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-LOGIN_REDIRECT_URL = 'https://bc3d638e-4472-44c8-9ad4-eacf63dd27a2.e1-us-east-azure.choreoapps.dev/home'
+LOGIN_REDIRECT_URL = 'https://bc3d638e-4472-44c8-9ad4-eacf63dd27a2.e1-us-east-azure.choreoapps.dev/'
 LOGOUT_REDIRECT_URL = 'https://bc3d638e-4472-44c8-9ad4-eacf63dd27a2.e1-us-east-azure.choreoapps.dev/'
 
 GOOGLE_REDIRECT_URI = 'https://bc3d638e-4472-44c8-9ad4-eacf63dd27a2.e1-us-east-azure.choreoapps.dev/dj-rest-auth/google/callback/'
