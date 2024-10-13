@@ -115,7 +115,7 @@ function Connect({myuser , content}) {
     if(!sessionStorage.getItem('guest')){
       let encryptkey = encryptCode(token);
       const ws = new WebSocket(
-        `ws://localhost:8000/ws/${encryptkey}/?token=${localStorage.getItem(
+        `ws://d4fb45b6-f97f-4526-9bda-a60a721d6636-dev.e1-us-east-azure.choreoapis.dev/ecodeploy/backend/v1.0/ws/${encryptkey}/?token=${localStorage.getItem(
           "access_token"
         )}`
       );
@@ -131,7 +131,7 @@ function Connect({myuser , content}) {
     else{
       let encryptkey = encryptCode(token);
       const ws = new WebSocket(
-        `ws://localhost:8000/ws/${encryptkey}/?guest=${myuser}`
+        `ws://d4fb45b6-f97f-4526-9bda-a60a721d6636-dev.e1-us-east-azure.choreoapis.dev/ecodeploy/backend/v1.0/ws/${encryptkey}/?guest=${myuser}`
       );
       ws.onopen = () => {
         toast.info(`Connected to device with code ${token}`);
