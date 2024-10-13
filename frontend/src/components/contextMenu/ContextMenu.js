@@ -11,7 +11,7 @@ function ContextMenu({ toggleVisibility, position }) {
     }
     else{
       const m = toast.loading("Please wait");
-      const response = axiosInstance.post("http://localhost:8000/logou_t/", {
+      const response = axiosInstance.post("https://d4fb45b6-f97f-4526-9bda-a60a721d6636-dev.e1-us-east-azure.choreoapis.dev/ecodeploy/backend/v1.0/logou_t/", {
           refresh_token: localStorage.getItem("refresh_token"),
       })
       .then(()=>{
