@@ -94,10 +94,12 @@ GOOGLE_REDIRECT_URI = 'http://localhost:8000/dj-rest-auth/google/callback/'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
+    "https://bc3d638e-4472-44c8-9ad4-eacf63dd27a2.e1-us-east-azure.choreoapps.dev"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
+    "https://bc3d638e-4472-44c8-9ad4-eacf63dd27a2.e1-us-east-azure.choreoapps.dev"
 ]
 
 MIDDLEWARE = [
