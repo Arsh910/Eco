@@ -1,2 +1,1 @@
-web: daphne Project.asgi:application --port 8000 --bind 0.0.0.0
-worker: python manage.py runworker
+web: python manage.py runserver 0.0.0.0:8000
