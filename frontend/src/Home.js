@@ -35,7 +35,6 @@ const Home = ({ myuser ,content , setContent}) => {
     var y = event.clientX;
     var x = event.clientY;
     setCursorPosition({ x, y });
-    console.log(x,y);
     setIsMenuToggled(!isMenuToggled);
   };
 
