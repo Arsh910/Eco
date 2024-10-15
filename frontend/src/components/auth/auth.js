@@ -41,10 +41,6 @@ function LoginPage() {
     const m = toast.loading("Please wait");
     
     const endpoint = signUp ? "/signup/" : "/logi_n/";
-    console.log(formdata.email);
-    console.log(formdata.username);
-    console.log(formdata.password);
-    console.log(formdata.confpassword);
     axios
       .post(`https://eco-fjf5.onrender.com${endpoint}`, {
         email: formdata.email,
@@ -53,7 +49,6 @@ function LoginPage() {
         password2: signUp ? formdata.confpassword : undefined,
       })
       .then((response) => {
-        console.log(response);
         localStorage.setItem("access_token", response.data.token.access);
         localStorage.setItem("refresh_token", response.data.token.refresh);
         axios.defaults.headers["Authorization"] =
@@ -61,7 +56,6 @@ function LoginPage() {
         window.location.href = "/";
       })
       .catch((errors) => {
-        console.log(errors);
         toast.update(m, {
           render: `${errors.response.data.error}`,  
           autoClose: true,                        
@@ -98,11 +92,9 @@ function LoginPage() {
       })
       .catch((errors) => {
         toast.warn(`${errors.response.data.error}`);
-        // console.log(errors.response.data.error);
       });
     }
     else{
-      console.log();
     }
   }
   }, []);
