@@ -24,7 +24,7 @@ def generate_random_string(length=12, include_symbols=True):
 
 class GoogleLogin(SocialLoginView):
     adapter_class = GoogleOAuth2Adapter
-    callback_url = 'http://localhost:8000/login'
+    callback_url = 'https://eco-fjf5.onrender.com/login'
     client_class = OAuth2Client
 
 class GoogleLoginCallback(APIView):
@@ -40,7 +40,7 @@ class GoogleLoginCallback(APIView):
             'code': code,
             'client_id': settings.YOUR_CLIENT_ID,
             'client_secret': settings.YOUR_SECRET_KEY,
-            'redirect_uri': 'http://localhost:5173/login/',
+            'redirect_uri': 'https://eco-1-eyp3.onrender.com/',
             'grant_type': 'authorization_code',
         }
         token_response = requests.post(token_url, data=token_data)
