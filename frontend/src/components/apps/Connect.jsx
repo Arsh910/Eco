@@ -215,6 +215,14 @@ function Connect({myuser , content}) {
     let fileData = null;
     let fileName = null;
 
+    let user = '';
+    if(sessionStorage.getItem('guest') == 'yes'){
+      user = myuser;
+    }
+    else{
+      user = myuser.username;
+    }
+
     if (file) {
       sendingtoast = toast.loading("preparing file....", {
         autoClose: false,
@@ -231,14 +239,14 @@ function Connect({myuser , content}) {
           autoClose: false,
           isLoading: true,
         });
-
+        console.log(myuser);
         webSocket.send(
           JSON.stringify({
             typeof: "copy",
             copy: null,
             file: fileData,
             file_name: fileName,
-            f_user: myuser.username,
+            f_user: user,
           })
         );
       };
@@ -254,7 +262,7 @@ function Connect({myuser , content}) {
           typeof: "copy",
           copy: text,
           file: null,
-          f_user: myuser.username,
+          f_user: user,
         })
       );
       toast.success(`Text Sent`);
@@ -275,6 +283,14 @@ function Connect({myuser , content}) {
     const textElement = textElementRef.current;
     const fileElement = fileElementRef.current;
 
+    let user = '';
+    if(sessionStorage.getItem('guest') == 'yes'){
+      user = myuser;
+    }
+    else{
+      user = myuser.username;
+    }
+    
     if (webSocket) {
       webSocket.onmessage = function (e) {
         const k = JSON.parse(e.data);
@@ -283,7 +299,7 @@ function Connect({myuser , content}) {
           setList(k.list);
         }
 
-        if (k.typeof == "copy" && myuser.username != k.f_user && k.f_user != undefined) {
+        if (k.typeof == "copy" && user != k.f_user && k.f_user != undefined) {
           handleIncomingCopy(k);
         }
 
