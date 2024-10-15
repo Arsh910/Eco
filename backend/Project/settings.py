@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-7y6zdbl^3c!=w=5j3o^j(u+c#8(l620j=#rq&h&pze_&b(nap-'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*']
 
@@ -62,8 +62,8 @@ INSTALLED_APPS = [
 
 SITE_ID = 1
 
-YOUR_CLIENT_ID = "490514805646-1fejvo7jj43h41sf8c6gvlo5ufoeblp8.apps.googleusercontent.com"
-YOUR_SECRET_KEY = "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"
+YOUR_CLIENT_ID = os.getenv("YOUR_CLIENT_ID")
+YOUR_SECRET_KEY = os.getenv("YOUR_SECRET_KEY")
 
 CORS_ALLOW_CREDENTIALS = True
 
