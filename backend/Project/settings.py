@@ -87,19 +87,19 @@ SOCIALACCOUNT_PROVIDERS = {
     }
 }
 
-LOGIN_REDIRECT_URL = 'https://3f6ee771-f9df-4689-bc19-f0269afc378a.e1-us-east-azure.choreoapps.dev/'
-LOGOUT_REDIRECT_URL = 'https://3f6ee771-f9df-4689-bc19-f0269afc378a.e1-us-east-azure.choreoapps.dev/'
+LOGIN_REDIRECT_URL = 'https://eco-1-eyp3.onrender.com/'
+LOGOUT_REDIRECT_URL = 'https://eco-1-eyp3.onrender.com/'
 
-GOOGLE_REDIRECT_URI = 'https://3f6ee771-f9df-4689-bc19-f0269afc378a.e1-us-east-azure.choreoapps.dev/dj-rest-auth/google/callback/'
+GOOGLE_REDIRECT_URI = 'https://eco-1-eyp3.onrender.com/dj-rest-auth/google/callback/'
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://3f6ee771-f9df-4689-bc19-f0269afc378a.e1-us-east-azure.choreoapps.dev"
+    "https://eco-1-eyp3.onrender.com"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
-    "https://3f6ee771-f9df-4689-bc19-f0269afc378a.e1-us-east-azure.choreoapps.dev"
+    "https://eco-1-eyp3.onrender.com"
 ]
 
 MIDDLEWARE = [
