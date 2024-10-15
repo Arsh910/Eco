@@ -69,7 +69,7 @@ function LoginPage() {
   // social login 
   function Sendgoogle() {
     window.location.replace(
-      "https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=http://localhost:5173/login/&prompt=consent&response_type=code&client_id=490514805646-1fejvo7jj43h41sf8c6gvlo5ufoeblp8.apps.googleusercontent.com&scope=openid%20email%20profile&access_type=offline"
+      "https://accounts.google.com/o/oauth2/v2/auth?redirect_uri=https://eco-1-eyp3.onrender.com/&prompt=consent&response_type=code&client_id=490514805646-1fejvo7jj43h41sf8c6gvlo5ufoeblp8.apps.googleusercontent.com&scope=openid%20email%20profile&access_type=offline"
     );
   }
   useEffect(() => {
