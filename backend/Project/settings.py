@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-7y6zdbl^3c!=w=5j3o^j(u+c#8(l620j=#rq&h&pze_&b(nap-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://eco-1-eyp3.onrender.com','https://eco-fjf5.onrender.com']
+ALLOWED_HOSTS = ['*']
 
 AUTH_USER_MODEL = 'User_Profile.Profile'
 
