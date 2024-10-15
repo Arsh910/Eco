@@ -79,7 +79,7 @@ function LoginPage() {
     if (code != undefined){
     const k = toast.loading("wait please , we are logging you in");
     axios
-      .get(`https://eco-fjf5.onrender.com/dj-rest-auth/google/callback/?code=${code}`)
+      .get(`https://eco-1-eyp3.onrender.com/dj-rest-auth/google/callback/?code=${code}`)
       .then((response) => {
         if(response.data.g_type == 'eco-google-login-for-user'){
           toast.update(k,{
