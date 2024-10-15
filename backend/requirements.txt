@@ -22,6 +22,7 @@ django-websockets==0.0.10
 djangorestframework==3.14.0
 djangorestframework-simplejwt==5.3.0
 drf-social-oauth2==3.1.0
+dj-database-url==2.2.0
 google-api-core==2.19.1
 google-api-python-client==2.142.0
 google-auth==2.34.0
@@ -42,6 +43,8 @@ proto-plus==1.24.0
 protobuf==5.27.3
 psycopg==3.2.3
 psycopg-binary==3.2.3
+psycopg2==2.9.9
+psycopg2-binary==2.9.9
 pyasn1==0.6.0
 pyasn1_modules==0.4.0
 pycparser==2.22
