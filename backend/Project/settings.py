@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-7y6zdbl^3c!=w=5j3o^j(u+c#8(l620j=#rq&h&pze_&b(nap-
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://eco-1-eyp3.onrender.com','https://eco-fjf5.onrender.com']
 
 AUTH_USER_MODEL = 'User_Profile.Profile'
 
@@ -94,12 +94,14 @@ GOOGLE_REDIRECT_URI = 'https://eco-1-eyp3.onrender.com/dj-rest-auth/google/callb
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:5173",
-    "https://eco-1-eyp3.onrender.com"
+    "https://eco-1-eyp3.onrender.com",
+    "https://eco-fjf5.onrender.com"
 ]
 
 CSRF_TRUSTED_ORIGINS = [
     "http://localhost:5173",
-    "https://eco-1-eyp3.onrender.com"
+    "https://eco-1-eyp3.onrender.com",
+    "https://eco-fjf5.onrender.com"
 ]
 
 MIDDLEWARE = [
