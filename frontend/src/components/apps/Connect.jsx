@@ -239,7 +239,6 @@ function Connect({myuser , content}) {
           autoClose: false,
           isLoading: true,
         });
-        console.log(myuser);
         webSocket.send(
           JSON.stringify({
             typeof: "copy",
