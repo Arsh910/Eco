@@ -91,6 +91,7 @@ function LoginPage() {
         }
       })
       .catch((errors) => {
+        console.log(errors);
         toast.warn(`${errors.response.data.error}`);
       });
     }
