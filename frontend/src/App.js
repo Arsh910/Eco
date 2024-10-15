@@ -63,7 +63,6 @@ const App = () => {
         })
         .then((response) => {
           if (response && response.data.user) {
-            console.log(response.data.user);
             setmyuser(response.data.user);
             toast.info("welcome " + response.data.user.username);
             setContent(true);
